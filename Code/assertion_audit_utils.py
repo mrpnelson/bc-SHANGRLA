@@ -1037,7 +1037,7 @@ class TestNonnegMean:
         Stilde = (np.insert(np.cumsum(x),0,0)/N)[0:len(x)] # \tilde{S}_{j-1}
         t_minus_Stilde = t - Stilde
         mart_max = 1
-        mart_vec = np.ones_like(x, dtype=np.float)
+        mart_vec = np.ones_like(x, dtype=float)
         if any(t_minus_Stilde < 0): # sample total exceeds hypothesized population total 
             mart_max = np.inf
         elif np.mean(x) <= t: # sample mean does not exceed hypothesized population mean
